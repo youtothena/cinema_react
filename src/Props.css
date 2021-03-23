@@ -1,0 +1,13 @@
+#wrap {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+img {
+    width: 100%;
+    border: 1px solid #000;
+}
+section {
+    width: 50%;
+    float: left;
+}
