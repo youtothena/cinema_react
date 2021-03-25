@@ -2,50 +2,59 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Movie from '../components/Movie';
 import './Home.css';
-
 class Home extends Component {
   state = {
     isLoading: true,
-    movies: [], 
+    movies: [],
   };
 
   render() {
-    const {isLoading, movies} = this.state // true
+    const { isLoading, movies } = this.state
     return (
       <section className="container">
-        {isLoading? (
+        <h1>Moive List</h1>
+        { isLoading ? (
           <div className="loader">
-           <span className="loader_text">Loading...</span>
-            </div>
-          ): (
+            <h1 className="loader">
+            <span>L</span>
+            <span>O</span>
+            <span>A</span>
+            <span>D</span>
+            <span>I</span>
+            <span>N</span>
+            <span>G</span>
+            </h1>
+          </div>
+          ) : (
             <div className="movies">
-              {movies.map((movie => (
-                <Movie year ={movie.year} title={movie.title} summary={movie.summary} poster={movie.medium_cover_image} genres={movie.genres} rating={movie.rating}/>
-              )))}
+              { movies.map(movie => (
+                <Movie 
+                  key = {movie.id}
+                  id = {movie.id}
+                  year = {movie.year}
+                  title = {movie.title}
+                  summary = {movie.summary}
+                  poster = {movie.large_cover_image}
+                  genres = {movie.genres}
+                />
+              )) }
             </div>
-          )}
+            ) }
       </section>
     );
-  }
+  };
 
-  getMovies = async() => {
+  getMovies = async () =>{
     const {
-      data: { 
-        data: {movies}, 
+      data: {
+        data: { movies },
       },
     } = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating');
-
-    console.log(movies);
-    this.setState({movies, isLoading: false}); 
-    console.log(this.state);
+    this.setState( {movies: movies, isLoading: false} );
   }
 
-  
   componentDidMount(){
-    setTimeout(()=>{
-      this.getMovies();
-    },3000);
+    this.getMovies();
   }
-
 }
 export default Home;

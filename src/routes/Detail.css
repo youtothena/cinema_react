@@ -1,0 +1,46 @@
+body {
+    background-color: whitesmoke;
+}
+.detail_box {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+.box {
+    display: flex;
+    flex-flow: row nowrap;
+    border-radius: 5px;
+    justify-content: space-around;
+    padding: 20px 0;
+    box-shadow: 2px 2px 3px 1px #424242;
+    align-items: center;
+}
+.detail_box img {
+    width: 300px;
+    padding: 0 20px;
+}
+.text_box {
+    line-height: 1.2;
+}
+.text_box h1 {
+    font-weight: 900;
+    font-size: 2em;
+}
+.sub_text {
+    font-size: 0.75em;
+    color: darkgray;
+    padding-bottom: 50px;
+}
+.sub_text span {
+    padding-left: 10px;
+}
+.text {
+    font-size: 18px;
+    padding: 0 30px;
+    text-align: justify;
+    line-height: 24px;
+}
+.text strong {
+    font-weight: 700;
+    padding-bottom: 10px;
+}
