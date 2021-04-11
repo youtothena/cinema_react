@@ -1,17 +1,17 @@
-# Project Title
+# 프로젝트 타이틀
 
-A purpose of this project is to using an API in React, specially about cinema.
+수업 중 진행한 리액트 API 연동 실습
 
+## 프로젝트 정보
 
-## Information about project
+1. 기존 실습에서 loading 페이지, 영화 카드 구성 CSS, Link 및 Component 구성을 커스텀했습니다.
+2. API 데이터를 가져오는 시간을 고려하여 비동기 작업을 사용했습니다.
 
-1. How to enjoy this project : Just look around the cinema list and when you find an interesting movie, click it. It shows you some informations.
-2. It is made by React, so use this URL (https://youtothena.github.io/cinema_react/)
+### 개선 방안
 
-### Contribute
+1. 영화 검색 기능 추가
+2. 로딩 페이지의 간격 조정 또는 조금 더 효율적인 로딩 페이지(영화와 관련된 or 시선을 고정시킬 수 있는 로딩 페이지)
 
-You can add any other function (ex. search)
+#### 출처
 
-## Learn More
-
-1. Copyright of API : (https://yts.mx/api)
+Copyright of API : (https://yts.mx/api)
